@@ -57,4 +57,4 @@ Resource terraform для ЯО
 - [VPC subnet](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/vpc_subnet)
 - [Route table](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/vpc_route_table)
 - [Compute Instance](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/compute_instance)
-- [example_yandex_cloud](https://github.com/search?q=yandex+cloud)
+- [example_yandex_cloud](https://github.com/RebrainMe/yandex-cloud-events/tree/master/terraform)
