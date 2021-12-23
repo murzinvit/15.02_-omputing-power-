@@ -51,7 +51,7 @@ echo "<html><h1>My cool web-server</h1></html>" > index.html
 
 ---
 work notes:
-Статические сайты в S3: https://cloud.yandex.ru/docs/storage/concepts/hosting </br>
+Дока по YC S3: https://cloud.yandex.ru/docs/storage/concepts/hosting </br>
 
 Resource terraform для ЯО
 - [VPC subnet](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/vpc_subnet)
