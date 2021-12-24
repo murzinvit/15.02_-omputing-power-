@@ -2,6 +2,10 @@
 # instance
 ##########
 
+data "yandex_compute_image" "ubuntu_image" {
+  family = "ubuntu-1804-lts"
+}
+
 resource "yandex_compute_instance" "vm-1" {
   name = var.vm_name
 
@@ -53,8 +57,11 @@ resource "yandex_compute_instance" "vm-2" {
 }
 
 
-resource "yandex_compute_instance" "vm-3" {
-  name = var.vm3_name
+resource "yandex_compute_instance" "station-2" {
+  name = "station-2"
+  zone = "ru-central1-a"
+  hostname = "station-2"
+  platform_id = "standard-v1"
 
   resources {
     cores  = 2
@@ -63,13 +70,14 @@ resource "yandex_compute_instance" "vm-3" {
 
   boot_disk {
     initialize_params {
-      image_id = var.vm3_image
+      image_id = data.yandex_compute_image.ubuntu_image.id
+      size = 10
     }
   }
 
   network_interface {
     subnet_id  = yandex_vpc_subnet.subnet-2.id
-    ip_address = var.vm3_ip
+    ip_address = "192.168.20.20"
   }
 
   metadata = {

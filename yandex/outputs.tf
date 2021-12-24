@@ -17,7 +17,7 @@ output "external_ip_address_vm_2" {
 }
 
 output "internal_ip_address_vm_3" {
-  value = yandex_compute_instance.vm-3.network_interface.0.ip_address
+  value = yandex_compute_instance.station-2.network_interface.0.ip_address
 }
 
 
