@@ -6,8 +6,10 @@ data "yandex_compute_image" "ubuntu_image" {
   family = "ubuntu-1804-lts"
 }
 
-resource "yandex_compute_instance" "vm-1" {
-  name = var.vm_name
+resource "yandex_compute_instance" "nat-1" {
+  name = "nat-1"
+  zone = "ru-central1-a"
+  hostname = "nat-1"
 
   resources {
     cores  = 2
@@ -16,14 +18,14 @@ resource "yandex_compute_instance" "vm-1" {
 
   boot_disk {
     initialize_params {
-      image_id = var.nat_image
+      image_id = "fd80mrhj8fl2oe87o4e1"
     }
   }
 
   network_interface {
     subnet_id  = yandex_vpc_subnet.subnet-1.id
     nat        = true
-    ip_address = var.internal_nat_ip
+    ip_address = "192.168.10.254"
   }
 
   metadata = {
