@@ -30,6 +30,14 @@ variable "folder_id" {
   default = ""
 }
 
+variable "bucket_access_key" {
+  default = ""
+}
+
+variable "bucket_secret_key" {
+  default = ""
+}
+
 variable "zone" {
   default = "ru-central1-a"
 }
