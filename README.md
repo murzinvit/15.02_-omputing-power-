@@ -58,3 +58,13 @@ Resource terraform для ЯО
 - [Route table](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/vpc_route_table)
 - [Compute Instance](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/compute_instance)
 - [example_yandex_cloud](https://github.com/RebrainMe/yandex-cloud-events/tree/master/terraform)
+
+
+### work notes:
+Start work yc: https://cloud.yandex.ru/docs/solutions/infrastructure-management/terraform-quickstart </br>
+Install terraform: https://learn.hashicorp.com/tutorials/terraform/install-cli </br>
+yc install: https://cloud.yandex.ru/docs/cli/operations/install-cli </br>
+yc resources: https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs </br>
+Resourses FAQ: https://cloud.yandex.ru/docs/cli/cli-ref/managed-services/compute/instance/ </br>
+Static routes: https://cloud.yandex.ru/docs/vpc/concepts/static-routes#internet-routes </br>
+SSH:  https://cloud.yandex.ru/docs/managed-kubernetes/operations/node-connect-ssh#key-format </br>
