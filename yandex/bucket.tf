@@ -1,17 +1,27 @@
-resource "yandex_storage_bucket" "murzin241121" {
+resource "yandex_storage_bucket" "ioakim" {
   access_key = var.bucket_access_key
   secret_key = var.bucket_secret_key
-  acl        = "private"
-  bucket     = "murzin241121"
+  bucket     = "ioakim"
+  acl        = "public-read"
+  website {
+    index_document = "files/index.html"
+  }
 }
 
-
-resource "yandex_storage_object" "images-object" {
+resource "yandex_storage_object" "index-object" {
   access_key = var.bucket_access_key
   secret_key = var.bucket_secret_key
-  bucket     = "murzin241121"
-  acl        = "private"
-  key        = "Americano"
-  source     = "images/Americano.jpg"
+  bucket     = "ioakim"
+  key        = "index.html"
+  source     = "files/index.html"
 }
+
+resource "yandex_storage_object" "image-object" {
+  access_key = var.bucket_access_key
+  secret_key = var.bucket_secret_key
+  bucket     = "ioakim"
+  key        = "americano"
+  source     = "files/americano.jpg"
+}
+
 
