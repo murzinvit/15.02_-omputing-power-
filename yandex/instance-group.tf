@@ -25,7 +25,7 @@ resource "yandex_compute_instance_group" "group1" {
     boot_disk {
       mode = "READ_WRITE"
       initialize_params {
-        image_id = var.vm2_image
+        image_id = "fd827b91d99psvq5fjit"
         size = 4
       }
     }
