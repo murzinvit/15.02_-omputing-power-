@@ -68,3 +68,4 @@ yc resources: https://registry.terraform.io/providers/yandex-cloud/yandex/latest
 Resourses FAQ: https://cloud.yandex.ru/docs/cli/cli-ref/managed-services/compute/instance/ </br>
 Static routes: https://cloud.yandex.ru/docs/vpc/concepts/static-routes#internet-routes </br>
 SSH:  https://cloud.yandex.ru/docs/managed-kubernetes/operations/node-connect-ssh#key-format </br>
+Best practises: https://cloud.yandex.ru/docs/iam/best-practices/using-iam-securely </br>
