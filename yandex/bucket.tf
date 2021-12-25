@@ -2,6 +2,7 @@ resource "yandex_storage_bucket" "netologybucket" {
   access_key = var.bucket_access_key
   secret_key = var.bucket_secret_key
   bucket     = "netologybucket"
+  force_destroy      = true
   acl        = "public-read"
   website {
     index_document = "index.html"
