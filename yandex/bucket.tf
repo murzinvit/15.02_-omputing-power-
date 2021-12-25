@@ -1,4 +1,4 @@
-resource "yandex_storage_bucket" "netology" {
+resource "yandex_storage_bucket" "netologybucket" {
   access_key = var.bucket_access_key
   secret_key = var.bucket_secret_key
   bucket     = "netologybucket"
