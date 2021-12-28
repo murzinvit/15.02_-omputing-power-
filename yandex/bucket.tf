@@ -14,7 +14,7 @@ resource "yandex_storage_object" "index-object" {
   acl        = "public-read"
   bucket     = "netologybucket"
   key        = "index.html"
-  source     = "files/index.html"
+  source     = "index.html"
   depends_on = [
     yandex_storage_bucket.netologybucket,
   ]
@@ -26,7 +26,7 @@ resource "yandex_storage_object" "image-object" {
   acl        = "public-read"
   bucket     = "netologybucket"
   key        = "americano"
-  source     = "files/americano.jpg"
+  source     = "americano.jpg"
   depends_on = [
     yandex_storage_bucket.netologybucket,
   ]

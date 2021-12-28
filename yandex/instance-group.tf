@@ -5,17 +5,21 @@ resource "yandex_iam_service_account" "instances" {
 
 resource "yandex_resourcemanager_folder_iam_binding" "editor" {
   folder_id = var.folder_id
-  role = "editor"
+  role      = "admin"
   members = [
     "serviceAccount:${yandex_iam_service_account.instances.id}",
   ]
+  depends_on = [
+    yandex_iam_service_account.instances,
+  ]
 }
 
-resource "yandex_compute_instance_group" "group1" {
-  name               = "test-ig"
+resource "yandex_compute_instance_group" "testing_ig" {
+  name                = "testing-ig"
   folder_id           = var.folder_id
   deletion_protection = false
-  service_account_id  = "${yandex_iam_service_account.instances.id}"
+  service_account_id  = yandex_iam_service_account.instances.id
+
   instance_template {
     platform_id = "standard-v1"
     resources {
@@ -26,23 +30,22 @@ resource "yandex_compute_instance_group" "group1" {
       mode = "READ_WRITE"
       initialize_params {
         image_id = "fd827b91d99psvq5fjit"
-        size = 4
+        size     = 4
       }
     }
     network_interface {
-      network_id = yandex_vpc_network.network-1.id
       subnet_ids = [yandex_vpc_subnet.subnet-1.id]
-      nat = true
+      nat        = true
     }
 
     metadata = {
-       user-data = "${file("meta.txt")}"
+      user-data = "${file("meta.txt")}"
     }
   }
 
   scale_policy {
     fixed_scale {
-       size = 3
+      size = 3
     }
   }
 
@@ -56,5 +59,7 @@ resource "yandex_compute_instance_group" "group1" {
     max_expansion   = 2
     max_deleting    = 2
   }
-
+  depends_on = [
+    yandex_iam_service_account.instances, yandex_resourcemanager_folder_iam_binding.editor,
+  ]
 }

@@ -6,7 +6,6 @@ resource "yandex_compute_instance" "vm-1" {
   name     = var.vm_name
   zone     = "ru-central1-a"
   hostname = "nat"
-  
   resources {
     cores  = 2
     memory = 2
@@ -33,7 +32,6 @@ resource "yandex_compute_instance" "vm-2" {
   name     = var.vm2_name
   zone     = "ru-central1-a"
   hostname = "vm-2"
-  
   resources {
     cores  = 2
     memory = 2
@@ -61,7 +59,6 @@ resource "yandex_compute_instance" "vm-3" {
   name     = var.vm3_name
   zone     = "ru-central1-a"
   hostname = "vm-3"
-  
   resources {
     cores  = 2
     memory = 2
