@@ -59,6 +59,10 @@ resource "yandex_compute_instance_group" "testing_ig" {
     max_expansion   = 2
     max_deleting    = 2
   }
+  metadata = {
+      index-file = file("index.html")
+      ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
+  }
   depends_on = [
     yandex_iam_service_account.instances, yandex_resourcemanager_folder_iam_binding.editor,
   ]
