@@ -15,6 +15,9 @@ resource "yandex_storage_object" "index-object" {
   bucket     = "netologybucket"
   key        = "index.html"
   source     = "files/index.html"
+  depends_on = [
+    yandex_storage_bucket.netologybucket,
+  ]
 }
 
 resource "yandex_storage_object" "image-object" {
@@ -24,6 +27,9 @@ resource "yandex_storage_object" "image-object" {
   bucket     = "netologybucket"
   key        = "americano"
   source     = "files/americano.jpg"
+  depends_on = [
+    yandex_storage_bucket.netologybucket,
+  ]
 }
 
 
