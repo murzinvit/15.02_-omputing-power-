@@ -39,7 +39,8 @@ resource "yandex_compute_instance_group" "testing_ig" {
     }
 
     metadata = {
-      user-data = "${file("meta.txt")}"
+       index-file = "${file("index.html")}"
+       user-data = "${file("meta.txt")}"
     }
   }
 
@@ -52,16 +53,12 @@ resource "yandex_compute_instance_group" "testing_ig" {
   allocation_policy {
     zones = ["ru-central1-a"]
   }
-
+  
   deploy_policy {
     max_unavailable = 2
     max_creating    = 2
     max_expansion   = 2
     max_deleting    = 2
-  }
-  metadata = {
-      index-file = file("index.html")
-      ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
   }
   depends_on = [
     yandex_iam_service_account.instances, yandex_resourcemanager_folder_iam_binding.editor,
