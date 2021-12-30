@@ -40,8 +40,8 @@ resource "yandex_compute_instance_group" "testing_ig" {
     }
 
     metadata = {
-       index-file = "${file("index.html")}"
-       user-data = "${file("meta.txt")}"
+      user-data = file("index.yaml")
+      user-data = file("meta.txt")
     }
   }
 
