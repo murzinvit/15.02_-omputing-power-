@@ -22,6 +22,7 @@ resource "yandex_compute_instance_group" "testing_ig" {
 
   instance_template {
     platform_id = "standard-v1"
+    name = "site-node-{instance.short_id}"
     resources {
       memory = 2
       cores  = 2
