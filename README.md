@@ -61,6 +61,7 @@ Resource terraform для ЯО
 
 
 ### work notes:
+!!! instance metadata: https://github.com/gridgentoo/yandex-terraform/tree/master/terraform </br>
 !!! instance metadata: https://cloudbase-init.readthedocs.io/en/latest/userdata.html#cloud-config
 Metadata YC: https://cloud.yandex.ru/docs/compute/concepts/instance-groups/instance-template </br>
 Start work yc: https://cloud.yandex.ru/docs/solutions/infrastructure-management/terraform-quickstart </br>
