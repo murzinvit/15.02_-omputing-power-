@@ -61,6 +61,7 @@ Resource terraform для ЯО
 
 
 ### work notes:
+!!! instance templates: https://cloudbase-init.readthedocs.io/en/latest/userdata.html#cloud-config
 Instance templates: https://cloud.yandex.ru/docs/compute/concepts/instance-groups/instance-template </br>
 Start work yc: https://cloud.yandex.ru/docs/solutions/infrastructure-management/terraform-quickstart </br>
 Install terraform: https://learn.hashicorp.com/tutorials/terraform/install-cli </br>
