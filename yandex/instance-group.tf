@@ -36,7 +36,6 @@ resource "yandex_compute_instance_group" "testing_ig" {
     }
     network_interface {
       subnet_ids = [yandex_vpc_subnet.subnet-1.id]
-      nat        = true
     }
 
     metadata = {
@@ -53,7 +52,7 @@ resource "yandex_compute_instance_group" "testing_ig" {
   allocation_policy {
     zones = ["ru-central1-a"]
   }
-  
+
   deploy_policy {
     max_unavailable = 2
     max_creating    = 2
