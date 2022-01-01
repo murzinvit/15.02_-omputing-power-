@@ -6,6 +6,8 @@
 
 ![](https://github.com/murzinvit/screen_1/blob/c38cdce7df303b7e7b6fbd334f7e49207d4f5db5/YC_result_load_balancer.jpg) </br>
 
+![](https://github.com/murzinvit/screen_1/blob/31bac377c5e0dd42253360e5cd0284b11b78be2a/YC_dashboard_load_balancer.jpg) </br>
+
 
 ### Задание 1. Яндекс.Облако (обязательное к выполнению)
 
