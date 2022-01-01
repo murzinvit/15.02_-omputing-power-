@@ -1,5 +1,7 @@
 ## Домашнее задание к занятию 15.2 "Вычислительные мощности. Балансировщики нагрузки".
 
+[ycloud_manifest](https://github.com/murzinvit/15.02_yc_computing_power/tree/main/yandex) </br>
+
 ![](https://github.com/murzinvit/screen_1/blob/b52b873fa30a356debb98d5ee49667773774322b/YC_load_balancer_ok.jpg) </br>
 
 ![](https://github.com/murzinvit/screen_1/blob/c38cdce7df303b7e7b6fbd334f7e49207d4f5db5/YC_result_load_balancer.jpg) </br>
