@@ -8,6 +8,7 @@
 
 ![](https://github.com/murzinvit/screen_1/blob/31bac377c5e0dd42253360e5cd0284b11b78be2a/YC_dashboard_load_balancer.jpg) </br>
 
+![](https://github.com/murzinvit/screen_1/blob/31b1ad64a9cf4d4f3ef54604b08dff99bc1a921d/YC_group_instance.jpg) </br>
 
 ### Задание 1. Яндекс.Облако (обязательное к выполнению)
 
