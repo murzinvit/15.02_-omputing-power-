@@ -1,6 +1,7 @@
 resource "yandex_storage_bucket" "netologybucket" {
   access_key    = var.bucket_access_key
   secret_key    = var.bucket_secret_key
+  acl           = "public-read"
   bucket        = "netologybucket"
   force_destroy = "true"
   website {
@@ -8,25 +9,13 @@ resource "yandex_storage_bucket" "netologybucket" {
   }
 }
 
-resource "yandex_storage_object" "index-object" {
-  access_key = var.bucket_access_key
-  secret_key = var.bucket_secret_key
-  acl        = "public-read"
-  bucket     = "netologybucket"
-  key        = "index.html"
-  source     = "index.html"
-  depends_on = [
-    yandex_storage_bucket.netologybucket,
-  ]
-}
-
 resource "yandex_storage_object" "image-object" {
   access_key = var.bucket_access_key
   secret_key = var.bucket_secret_key
   acl        = "public-read"
   bucket     = "netologybucket"
-  key        = "americano"
-  source     = "americano.jpg"
+  key        = "coffee.jpg"
+  source     = "./files/coffee.jpg"
   depends_on = [
     yandex_storage_bucket.netologybucket,
   ]

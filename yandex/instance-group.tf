@@ -41,7 +41,6 @@ resource "yandex_compute_instance_group" "testing_ig" {
 
     metadata = {
       user-data = file("index.yaml")
-      user-data = file("meta.txt")
     }
   }
 
